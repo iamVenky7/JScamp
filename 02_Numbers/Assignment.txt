@@ -1,0 +1,274 @@
+1. What is lexical structure?
+
+sol: A programming language's lexical structure _specifies a set of some basic rules about how code should be written in it._ Rules like what variable names look like, the delimiter characters for comments, and how one program statement is separated from the next. It is the lowest-level syntax of a language.
+Simply, Elementry rules for the language.
+
+2. What is Unicode?
+
+sol: In Javascript, _the identifiers and string literals can be expressed in Unicode via a Unicode escape sequence._ The general syntax is \uXXXX , where X denotes four hexadecimal digits.
+For example, the letter o is denoted as '\u006F' in Unicode.
+
+3. Explain all the keywords present in the JavaScript with example.
+   sol: JavaScript keywords are reserved words. There are numbers of reserved keywords in javascript which has some special meaning. These keywords cannot be used as identifiers for example for variable names, for loop labels or for function names, etc in our JavaScript programs.
+   For example, const a = 'hello'; Here, const is a keyword that denotes that a is a constant.
+
+0)  in: It is an operator returns true if the specified property is present in the specified object, else it returns false.
+
+Example:
+var fruits = {f1: 'apple', f2: 'banana', f3: 'orange'};
+console.log('f2' in fruits); //output as true expected
+
+1. instanceof: Returns true if the object is an instance of the class otherwise false
+
+Example: var fruits=["apple", "banana", "orange"];
+
+fruits instanceof Object; // Returns true
+
+fruits instanceof Array; // Returns true
+
+fruits instanceof String; // Returns false
+
+2. arguments: Represents the list of parameters passed to the function when calling the function.
+
+Example:
+const func = function(p1, p2, p3) {
+const param = Array.from(arguments);
+console.log(param) // [11, 22, 33]
+}
+func(11, 22, 33);
+
+3. Do: Used to define a do-while loop.
+   Example:
+   var a=1;
+   do {
+   document.write("loop is running for " + a + "times</p>");
+   a++;
+   }
+   while(a <= 10);
+
+4. Function: Used to define a function to execute a block of code.
+   Example:
+   var func = function(){
+   return "Hello";
+   }
+   alert(func());
+
+5. class\*(ES6) :Used to define a class.
+   Example:
+   public class Employee {
+   public String efn = "Joseph";
+   public String eln = "Doe";
+   }
+
+6)return: Used to return from the function or method with or without a value.
+
+Example:
+var func = function(){
+return "Hello";
+}
+
+7. Eval: Used to evaluate a specified string. The eval use as a global function eval().
+   Example:
+   function fun( ) {
+   var str1=2;
+   var str1=3;
+   var res = eval(new String(str1 + str2));
+   document.write(res);
+   }
+   fun();
+
+8. For: Used to define a loop, for loop to repeatedly execute a block of code until a condition true.
+   Example :
+   for(var a=0; a<=10; a++) {
+   document.write("The loop is running for " + a + " times");
+   }
+
+9)if: Used to define a conditioned construct. if the statement is used to run a block of code if the condition is true.
+Example:
+var date = new Date();
+var day = date.getDay();
+if(day==5) {
+alert("This is weekend!");
+} else {
+alert("This is non-weekend!");
+
+10. break: used into a loop to break or stop the execution of the loop.
+    Example: for(var a=0; a<=10; a++) {
+    if(a == 5)
+    break;
+    document.write("The loop is running for " + a + " times");
+    }
+11. debugger: Used to stop the execution of javascript code and call debugging function if define. Debugger keyword word the same as the break.
+    Example:
+    var prod = 10 \* 10;
+    debugger;
+    document.getElementbyId("id").innerHTML = prod;
+
+12. yield: Used to pause and resume a generator function. The generator function is the same as a normal function but for returning a value in place of return it uses yield keyword.
+
+Example:
+function\* iter( a ) {
+while (a < 4) {
+yield a++;
+}
+}
+const i = iter ( 1 );
+console.log(i.next().value); //return 1
+console.log(i.next().value); //return 2
+console.log(i.next().value); //return 3
+
+13. continue: Used into a loop to continue the loop and skip the following statements inside the loop.
+    Example:
+    for(var a=0; a<=10; a++) {
+    if(a == 5)
+    continue;
+    document.write("The loop is running for " + a + " times");
+    }
+
+14. export\* (ES6):
+    Used to export objects, functions or values from the module so that can be used in another program with the help of import statement.
+
+Example: export let var fruits = ["apple", "banana", "orange"];// export an array
+export const fruit= "apple";// export a constant
+
+15. null: Used to represent a special data type no value.
+    Example :
+    var age = null;
+    alert(age);
+
+16. New: Used to create an object.
+    Example: Employee obj = new Employee ();
+
+17. throw: Used in a try block to explicitly throw an exception object.
+
+18. while: Used for while loop, while loop executes the block of code until the condition is true.
+
+Example:
+var a=1;
+while(a <= 10)
+{
+document.write("loop is running for " + a + "times</p>");
+a++;
+}
+
+19. delete: Used to remove properties from an object.
+
+Example:
+var fruits={f1: “apple”, f2: “banana”, f3: “orange”};
+delete fruits.f1;
+
+20. super: Used to call function or method of a parent class.
+    Example: super.disp(); //the disp is a method of a parent class
+
+Example:
+super.disp(); //the disp is a method of a parent class
+
+21. default: Used in a switch expression to specify the actions to be performed if no case
+
+Example:
+var date = new Date();
+switch(date.getDay()) {
+case 6:
+alert("This is weekend.");
+break;
+case 0:
+alert("This is weekend.");
+default:
+alert("Looking for a weekend.");
+break;
+}
+
+22. package: Used to identify java classes and to execute the java method in a javascript.
+
+Example: inBlock['package'] = something;
+
+import\*: Used to import the module in the javascript program.
+
+Example: import \* as alias from
+
+23. with:Used for iterating, just, in short, it is shortened for iteration.
+    Example:
+    var fruits = ["apple", "banana", "orange"];
+    for ( var i = fruits.length; i--; ) {
+    with ({ no : i }) {
+    link.onclick = function() {
+    alert(no);
+    };
+    }
+    }
+
+24. typeof: Which used to return the data type of an operand.
+
+Example: typeof(“hello”) // output as string
+
+25. var: Used to declare a variable
+
+Example:
+var fruits = ["apple", "banana", "orange"];
+var age=22;
+
+26. enum\*: Used to define a predefined list.
+
+27. try: Used for exception handling to check a block of code for errors.
+
+28. else: Used in the if-else statement, the else indicates the block of statements to be executed if the expression evaluates false.
+
+var date = new Date();
+var day = date.getDay();
+if(day==5) {
+alert("This is weekend!");
+} else {
+alert("This is non-weekend!");
+}
+
+29. this: Used to refer to the current object.
+    Example:
+    class Employee extends Person {
+    constructor(name, eid, salary) {
+    super(name);
+    }
+    get incsalary() {
+    return this.salary \* 0.2;
+    }
+    }
+
+30. let: Used to declare a variable limited to a scope of a block of code, unlike a variable declared by the var keyword.
+
+Example:
+let fruits = ["apple", "banana", "orange"];
+
+
+
+4)What are shorthand operators, explain with a suitable example?
+sol:   shorthand operator is a *shorter way to express something that is already available in the programming language*
+
+Name             	            Shorthand operator   	Meaning
+Assignment                         	x = f()	           x = f()
+Addition assignment	                x += f()	      x = x + f()
+Subtraction assignment             	x -= f()	      x = x - f()
+Multiplication assignment         	x *= f()	      x = x * f()
+Division assignment	                x /= f()	      x = x / f()
+Remainder assignment             	x %= f()	      x = x % f()
+Exponentiation assignment	        x **= f()	      x = x ** f()
+Left shift assignment             	x <<= f()	      x = x << f()
+Right shift assignment             	x >>= f()	      x = x >> f()
+Unsigned right shift assignment     x >>>= f()        x = x >>> f()
+Bitwise AND assignment             	x &= f()	      x = x & f()
+Bitwise XOR assignment             	x ^= f()	      x = x ^ f()
+Bitwise OR assignment	            x |= f()	      x = x | f()
+Logical AND assignment             	x &&= f()	      x && (x = f())
+Logical OR assignment	            x ||= f()	      x || (x = f())
+Logical nullish assignment          x ??= f()	      x ?? (x = f())
+
+
+
+5) What is “use Strict” in JavaScript?
+
+solution: Defines that JavaScript code should be executed in "strict mode".
+> Strict mode restricts the use of error syntax and will not let the code run with errors in place.
+> It eliminates some JavaScript silent errors by changing them to throw errors.
+> You can use strict mode in all your programs. It helps you to write cleaner code, like preventing you from using undeclared variables.
+
+Example:
+"use strict";
+x = 3.14;       // This will cause an error because x is not declared
